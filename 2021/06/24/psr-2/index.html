@@ -6,15 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives: 2021/6 | FZX的博客</title>
+  <title>psr-2 | FZX的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="跳出围城，跳入围城">
-<meta property="og:type" content="website">
-<meta property="og:title" content="FZX的博客">
-<meta property="og:url" content="http://example.com/archives/2021/06/index.html">
+  <meta name="description" content="代码规范 代码必须遵循“编码风格指南”PSR [PSR-1]。 代码必须使用4个空格进行缩进，而不是制表符。 线路长度不得有硬性限制;软限制必须是120个字符;线条不应该是80个字符或更少。 在命名空间声明之后必须有一个空行，并且在使用声明块之后必须有一个空行。 打开类的大括号必须在下一行，并且关闭大括号必须在主体后面的下一行。 打开方法的括号必须在下一行，并且关闭括号必须在主体后面的下一行。 必">
+<meta property="og:type" content="article">
+<meta property="og:title" content="psr-2">
+<meta property="og:url" content="http://example.com/2021/06/24/psr-2/index.html">
 <meta property="og:site_name" content="FZX的博客">
-<meta property="og:description" content="跳出围城，跳入围城">
+<meta property="og:description" content="代码规范 代码必须遵循“编码风格指南”PSR [PSR-1]。 代码必须使用4个空格进行缩进，而不是制表符。 线路长度不得有硬性限制;软限制必须是120个字符;线条不应该是80个字符或更少。 在命名空间声明之后必须有一个空行，并且在使用声明块之后必须有一个空行。 打开类的大括号必须在下一行，并且关闭大括号必须在主体后面的下一行。 打开方法的括号必须在下一行，并且关闭括号必须在主体后面的下一行。 必">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-06-24T01:39:20.978Z">
+<meta property="article:modified_time" content="2021-06-24T01:44:25.113Z">
 <meta property="article:author" content="FZX">
 <meta property="article:tag" content="后端，前端">
 <meta name="twitter:card" content="summary">
@@ -153,295 +155,218 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-psr-2" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      psr-2
+    </h1>
+  
+
+        
+        <a href="/2021/06/24/psr-2/" class="archive-article-date">
+  	<time datetime="2021-06-24T01:39:20.978Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-24</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="代码规范"><a href="#代码规范" class="headerlink" title="代码规范"></a>代码规范</h1><ul>
+<li>代码必须遵循“编码风格指南”PSR [PSR-1]。</li>
+<li>代码必须使用4个空格进行缩进，而不是制表符。</li>
+<li>线路长度不得有硬性限制;软限制必须是120个字符;线条不应该是80个字符或更少。</li>
+<li>在命名空间声明之后必须有一个空行，并且在使用声明块之后必须有一个空行。</li>
+<li>打开类的大括号必须在下一行，并且关闭大括号必须在主体后面的下一行。</li>
+<li>打开方法的括号必须在下一行，并且关闭括号必须在主体后面的下一行。</li>
+<li>必须在所有属性和方法上声明可见性;必须在可见性之前声明抽象和最终;必须在可见性之后声明static。</li>
+<li>控制结构关键字必须在它们之后有一个空格;方法和函数调用不用。</li>
+<li>控制结构的开口括号必须在同一条线上，并且关闭括号必须在主体后面的下一行。</li>
+<li>控制结构的开括号必须在它们后面没有空格，并且控制结构的右括号之前不能有空格。</li>
+</ul>
+<h1 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h1><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">Vendor</span>\<span class="title">Package</span>;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">use</span> <span class="title">FooInterface</span>;</span><br><span class="line"><span class="keyword">use</span> <span class="title">BarClass</span> <span class="title">as</span> <span class="title">Bar</span>;</span><br><span class="line"><span class="keyword">use</span> <span class="title">OtherVendor</span>\<span class="title">OtherPackage</span>\<span class="title">BazClass</span>;</span><br><span class="line"> </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Foo</span> <span class="keyword">extends</span> <span class="title">Bar</span> <span class="keyword">implements</span> <span class="title">FooInterface</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">sampleMethod</span>(<span class="params"><span class="variable">$a</span>, <span class="variable">$b</span> = <span class="literal">null</span></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="variable">$a</span> === <span class="variable">$b</span>) &#123;</span><br><span class="line">            bar();</span><br><span class="line">        &#125; <span class="keyword">elseif</span> (<span class="variable">$a</span> &gt; <span class="variable">$b</span>) &#123;</span><br><span class="line">            <span class="variable">$foo</span>-&gt;bar(<span class="variable">$arg1</span>);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            BazClass::bar(<span class="variable">$arg2</span>, <span class="variable">$arg3</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    <span class="keyword">final</span> <span class="keyword">public</span> <span class="built_in">static</span> <span class="function"><span class="keyword">function</span> <span class="title">bar</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="comment">// method body</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="2、通用"><a href="#2、通用" class="headerlink" title="2、通用"></a>2、通用</h2><h3 id="2-1-基本编码标准"><a href="#2-1-基本编码标准" class="headerlink" title="2.1 基本编码标准"></a>2.1 基本编码标准</h3><p>代码必须遵循PSR-1中列出的所有规则。</p>
+<h3 id="2-2-文档"><a href="#2-2-文档" class="headerlink" title="2.2 文档"></a>2.2 文档</h3><p>所有PHP文件必须使用Unix LF（换行）行结尾。</p>
+<p>所有PHP文件必须以一个空行结束。</p>
+<p>必须从仅包含PHP的文件中省略关闭？&gt;标记。</p>
+<h3 id="2-3-行"><a href="#2-3-行" class="headerlink" title="2.3 行"></a>2.3 行</h3><p>线路长度不得有硬性限制。</p>
+<p>线路长度的软限制必须是120个字符;自动样式检查器必须发出警告，但绝不能在软限制上出错。</p>
+<p>行不应超过80个字符;超过的行应该被分成多个后续行，每行不超过80个字符。</p>
+<p>在非空白行的末尾不得有尾随空格。</p>
+<p>可以添加空行以提高可读性并指示相关的代码块。</p>
+<p>每行不得超过一个语句。</p>
+<h3 id="2-4-缩进"><a href="#2-4-缩进" class="headerlink" title="2.4 缩进"></a>2.4 缩进</h3><p>代码必须使用4个空格的缩进，并且不得使用制表符进行缩进。</p>
+<p>N.b。：仅使用空格，而不是将空格与制表符混合，有助于避免差异，补丁，历史记录和注释的问题。空间的使用还使得易于插入细粒度的子压痕用于线间对齐。</p>
+<h3 id="2-5。关键字和真-假-空"><a href="#2-5。关键字和真-假-空" class="headerlink" title="2.5。关键字和真/假/空"></a>2.5。关键字和真/假/空</h3><p>PHP关键字必须是小写的。</p>
+<p>PHP常量true，false和null必须是小写的。</p>
+<h2 id="3-命名空间和使用声明"><a href="#3-命名空间和使用声明" class="headerlink" title="3.命名空间和使用声明"></a>3.命名空间和使用声明</h2><p>如果存在，则在命名空间声明后必须有一个空行。</p>
+<p>如果存在，所有使用声明必须在命名空间声明之后。</p>
+<p>每个声明必须有一个use关键字。</p>
+<p>使用块后必须有一个空行。</p>
+<p>例如：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">Vendor</span>\<span class="title">Package</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">use</span> <span class="title">FooClass</span>;</span><br><span class="line"><span class="keyword">use</span> <span class="title">BarClass</span> <span class="title">as</span> <span class="title">Bar</span>;</span><br><span class="line"><span class="keyword">use</span> <span class="title">OtherVendor</span>\<span class="title">OtherPackage</span>\<span class="title">BazClass</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// ... additional PHP code ...</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="4、类，属性和方法"><a href="#4、类，属性和方法" class="headerlink" title="4、类，属性和方法"></a>4、类，属性和方法</h2><h3 id="4-1-扩展和实施"><a href="#4-1-扩展和实施" class="headerlink" title="4.1 扩展和实施"></a>4.1 扩展和实施</h3><p>extends和implements关键字必须在类名称的同一行声明。</p>
+<p>类的开口支架必须自成一线;班级类的结束括号必须在方法体后面的下一行。</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line">    </span><br><span class="line"><span class="keyword">namespace</span> <span class="title">Vendor</span>\<span class="title">Package</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">use</span> <span class="title">FooClass</span>;</span><br><span class="line"><span class="keyword">use</span> <span class="title">BarClass</span> <span class="title">as</span> <span class="title">Bar</span>;</span><br><span class="line"><span class="keyword">use</span> <span class="title">OtherVendor</span>\<span class="title">OtherPackage</span>\<span class="title">BazClass</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ClassName</span> <span class="keyword">extends</span> <span class="title">ParentClass</span> <span class="keyword">implements</span> \<span class="title">ArrayAccess</span>, \<span class="title">Countable</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="comment">// constants, properties, methods</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>实现列表可以分为多行，每行后续行缩进一次。这样做时，列表中的第一项必须在下一行，并且每行必须只有一个接口。</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">Vendor</span>\<span class="title">Package</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">use</span> <span class="title">FooClass</span>;</span><br><span class="line"><span class="keyword">use</span> <span class="title">BarClass</span> <span class="title">as</span> <span class="title">Bar</span>;</span><br><span class="line"><span class="keyword">use</span> <span class="title">OtherVendor</span>\<span class="title">OtherPackage</span>\<span class="title">BazClass</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ClassName</span> <span class="keyword">extends</span> <span class="title">ParentClass</span> <span class="keyword">implements</span></span></span><br><span class="line"><span class="class">    \<span class="title">ArrayAccess</span>,</span></span><br><span class="line"><span class="class">    \<span class="title">Countable</span>,</span></span><br><span class="line"><span class="class">    \<span class="title">Serializable</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="comment">// constants, properties, methods</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-2-属性"><a href="#4-2-属性" class="headerlink" title="4.2 属性"></a>4.2 属性</h3><p>必须在所有属性上声明可见性。</p>
+<p>var关键字绝不能用于声明属性。</p>
+<p>每个语句不得超过一个属性。</p>
+<p>属性名称不应以单个下划线为前缀，以表示受保护或私有可见性。</p>
+<p>属性声明如下所示。</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">Vendor</span>\<span class="title">Package</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ClassName</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="variable">$foo</span> = <span class="literal">null</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-3-方法"><a href="#4-3-方法" class="headerlink" title="4.3 方法"></a>4.3 方法</h3><p>必须在所有方法上声明可见性。</p>
+<p>方法名称不应以单个下划线为前缀，以指示受保护或私有可见性。</p>
+<p>方法名称不得在方法名称后面用空格声明。开口支撑必须单独行，并且闭合支撑必须在身体后面的下一行。在左括号后面不能有空格，并且在右括号之前不能有空格。</p>
+<p>方法声明如下所示。请注意括号，逗号，空格和大括号的位置：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">namespace</span> <span class="title">Vendor</span>\<span class="title">Package</span>;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ClassName</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">fooBarBaz</span>(<span class="params"><span class="variable">$arg1</span>, &amp;<span class="variable">$arg2</span>, <span class="variable">$arg3</span> = []</span>)</span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="comment">// method body</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2021" class="archive-year">2021</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/06/24/Linux/" class="archive-article-date">
-  	<time datetime="2021-06-24T01:39:20.995Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/06/24/Linux/">Linux</a>
-    </h1>
-  
+      
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/06/24/psr-2/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/06/24/http%E5%8C%BA%E5%88%AB/" class="archive-article-date">
-  	<time datetime="2021-06-24T01:39:20.993Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-24</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2021/06/24/swagger/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          swagger
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/06/24/PHP%E5%BC%80%E5%8F%91%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">PHP命名规范</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/06/24/http%E5%8C%BA%E5%88%AB/">HTTP区别</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/06/24/CURL/" class="archive-article-date">
-  	<time datetime="2021-06-24T01:39:20.992Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/06/24/CURL/">curl</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/06/24/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" class="archive-article-date">
-  	<time datetime="2021-06-24T01:39:20.990Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/06/24/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">正则表达式</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/06/24/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="archive-article-date">
-  	<time datetime="2021-06-24T01:39:20.989Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/06/24/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/06/24/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/" class="archive-article-date">
-  	<time datetime="2021-06-24T01:39:20.987Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/06/24/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/">前端知识总结</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/06/24/T-SQL%E4%BC%98%E5%8C%96/" class="archive-article-date">
-  	<time datetime="2021-06-24T01:39:20.986Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/06/24/T-SQL%E4%BC%98%E5%8C%96/">T-SQL优化</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/06/24/Think%20PHP/" class="archive-article-date">
-  	<time datetime="2021-06-24T01:39:20.984Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/06/24/Think%20PHP/">TP</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/06/24/TCPIP/" class="archive-article-date">
-  	<time datetime="2021-06-24T01:39:20.983Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/06/24/TCPIP/">TCP/IP</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/06/24/swoole%E5%AD%A6%E4%B9%A0/" class="archive-article-date">
-  	<time datetime="2021-06-24T01:39:20.981Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/06/24/swoole%E5%AD%A6%E4%B9%A0/">swoole</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/2021/06/page/2/">2</a><a class="extend next" rel="next" href="/archives/2021/06/page/2/">Next &amp;raquo;</a>
-    </nav>
   
 
 
@@ -465,8 +390,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

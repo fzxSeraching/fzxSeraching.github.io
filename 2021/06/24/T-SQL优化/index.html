@@ -6,15 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives: 2021/6 | FZX的博客</title>
+  <title>T-SQL优化 | FZX的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="跳出围城，跳入围城">
-<meta property="og:type" content="website">
-<meta property="og:title" content="FZX的博客">
-<meta property="og:url" content="http://example.com/archives/2021/06/index.html">
+  <meta name="description" content="T-SQL优化   应用正确的索引 创建适当的索引覆盖 整理索引碎片 识别低效的TSQL，采用最佳实践 查询执行计划 使用SQL事件探查器和性能监控工具有效地诊断性能问题 应用反范式化，使用历史表 合理组织数据库文件组和文件 在大表上应用分区  一、 概述​        T-SQL优化场景：数据库表增长得很大，有些表甚至有上千万行数据，测试团队开始在生产数据库上测试，发现订单提交过程需要花5分钟">
+<meta property="og:type" content="article">
+<meta property="og:title" content="T-SQL优化">
+<meta property="og:url" content="http://example.com/2021/06/24/T-SQL%E4%BC%98%E5%8C%96/index.html">
 <meta property="og:site_name" content="FZX的博客">
-<meta property="og:description" content="跳出围城，跳入围城">
+<meta property="og:description" content="T-SQL优化   应用正确的索引 创建适当的索引覆盖 整理索引碎片 识别低效的TSQL，采用最佳实践 查询执行计划 使用SQL事件探查器和性能监控工具有效地诊断性能问题 应用反范式化，使用历史表 合理组织数据库文件组和文件 在大表上应用分区  一、 概述​        T-SQL优化场景：数据库表增长得很大，有些表甚至有上千万行数据，测试团队开始在生产数据库上测试，发现订单提交过程需要花5分钟">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-06-24T01:39:20.986Z">
+<meta property="article:modified_time" content="2021-06-24T01:44:55.489Z">
 <meta property="article:author" content="FZX">
 <meta property="article:tag" content="后端，前端">
 <meta name="twitter:card" content="summary">
@@ -153,295 +155,380 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-T-SQL优化" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2021" class="archive-year">2021</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/06/24/Linux/" class="archive-article-date">
-  	<time datetime="2021-06-24T01:39:20.995Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-24</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/06/24/Linux/">Linux</a>
+    <h1 class="article-title" itemprop="name">
+      T-SQL优化
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/06/24/http%E5%8C%BA%E5%88%AB/" class="archive-article-date">
-  	<time datetime="2021-06-24T01:39:20.993Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/06/24/http%E5%8C%BA%E5%88%AB/">HTTP区别</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/06/24/CURL/" class="archive-article-date">
-  	<time datetime="2021-06-24T01:39:20.992Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/06/24/CURL/">curl</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/06/24/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" class="archive-article-date">
-  	<time datetime="2021-06-24T01:39:20.990Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/06/24/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">正则表达式</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/06/24/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="archive-article-date">
-  	<time datetime="2021-06-24T01:39:20.989Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/06/24/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/06/24/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/" class="archive-article-date">
-  	<time datetime="2021-06-24T01:39:20.987Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/06/24/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/">前端知识总结</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/06/24/T-SQL%E4%BC%98%E5%8C%96/" class="archive-article-date">
+        
+        <a href="/2021/06/24/T-SQL%E4%BC%98%E5%8C%96/" class="archive-article-date">
   	<time datetime="2021-06-24T01:39:20.986Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-24</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/06/24/T-SQL%E4%BC%98%E5%8C%96/">T-SQL优化</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>T-SQL优化</p>
+<ul>
+<li> 应用正确的索引</li>
+<li>创建适当的索引覆盖</li>
+<li>整理索引碎片</li>
+<li>识别低效的TSQL，采用最佳实践</li>
+<li>查询执行计划</li>
+<li>使用SQL事件探查器和性能监控工具有效地诊断性能问题</li>
+<li>应用反范式化，使用历史表</li>
+<li>合理组织数据库文件组和文件</li>
+<li>在大表上应用分区</li>
+</ul>
+<h2 id="一、-概述"><a href="#一、-概述" class="headerlink" title="一、 概述"></a>一、 概述</h2><p>​        T-SQL优化场景：数据库表增长得很大，有些表甚至有上千万行数据，测试团队开始在生产数据库上测试，发现订单提交过程需要花5分钟时间，但在网站上线前的测试中，提交一次订单只需要2/3秒。适用于程序开发人员的一些优化技巧，DBA优化不在此列（比如DBA负责的磁盘阵列、分布式数据库服务等）</p>
+<h2 id="二、-应用正确的索引"><a href="#二、-应用正确的索引" class="headerlink" title="二、 应用正确的索引"></a>二、 应用正确的索引</h2><p>​        采用正确的索引会使生产系统的性能得到质的提升，而且创建或修改索引是在数据库上进行，不用修改程序，并且立即见效。</p>
+<p>什么是索引？</p>
+<ul>
+<li> 举例1：</li>
+</ul>
+<p>图书馆有成千上万本书，书没有按照顺序摆放，所以管理员只能逐个查找，每次都要花费大量的时间。</p>
+<p><strong>分析（无主键全表扫描）</strong>：和数据表没有主键一样，搜索表中的数据时，数据库引擎每次必须进行全表扫描，效率极低。</p>
+<ul>
+<li>举例2：</li>
+</ul>
+<p>图书馆的图书越来越多，图书管理员的工作变得异常痛苦，有一天来了一个聪明的小伙子，他看到图书管理员的痛苦工作后，想出了一个办法，他建议将每本书都编上号，然后按编号放到书架上，如果有人指定了图书编号，那么图书管理员很快就可以找到它的位置了。　</p>
+<p><strong>分析（创建聚集索引</strong>）：和给表创建主键一样的，<strong>创建主键时，会创建聚集索引树，表中的所有行在文件系统上根据主键值进行物理排序</strong>，当查询表中任一行</p>
+<p>时，数据库首先使用聚集索引树找到对应的数据页(就象首先找到书架一样)，然后在数据页中根据主键键值找到目标行(就象找到书架上的书一样)。</p>
+<ul>
+<li>举例3：</li>
+</ul>
+<p>图书管理员开始给图书编号，然后根据编号将书放到书架上，为此他花了整整一天时间，但最后经过测试，他发现找书的效率大大提高了。</p>
+<p><strong>分析（聚集索引查找）</strong>：一个表上只能创建一个聚集索引，就像书只能按一种规则摆放一样。</p>
+<ul>
+<li>举例4：</li>
+</ul>
+<p>很多人记不住书的编号，只记得书的名字，图书管理员无奈又只有扫描所有的图书编号挨个寻找，但这次他只花了20分钟，以前未给图书编号时要花2-3小时，</p>
+<p>但与根据图书编号查找图书相比，时间还是太长了，因此他向那个聪明的小伙子求助。</p>
+<p><strong>分析（非主键字段查找全表扫描）</strong>：给Product表增加了主键ProductID，但除此之外没有建立其它索引，当使用Product Name进行检索时，数据库引擎又只要</p>
+<p>进行全表扫描，逐个寻找。</p>
+<ul>
+<li>举例5：</li>
+</ul>
+<p>已经创建好了图书编号，现在只需要再创建一个索引或目录，将图书名称和对应的编号一起存储起来，但这一次是按图书名称进行排序，如果有人想</p>
+<p>找“Database Management System”一书，你只需要跳到“D”开头的目录，然后按照编号就可以找到图书了。图书管理员兴奋地花了几个小时创建了一个“图书名</p>
+<p>称”目录，经过测试，现在找一本书的时间缩短到1分钟了(其中30秒用于从“图书名称”目录中查找编号，另外根据编号查找图书用了30秒)。图书管理员开始了新</p>
+<p>的思考，读者可能还会根据图书的其它属性来找书，如作者，于是他用同样的办法为作者也创建了目录，现在可以根据图书编号，书名和作者在1分钟内查找任</p>
+<p>何图书了，图书管理员的工作变得轻松了，故事也到此结束。</p>
+<p><strong>分析</strong>（创建1个或者N个非聚集索引，走index_seek速度大幅提升）。</p>
+<ul>
+<li>总结：</li>
+</ul>
+<p>假设我们有一个Products表，创建了一个聚集索引(根据表的主键product_id自动创建的)，我们还需要在ProductName列上创建一个非聚集索引，创建非聚集索引</p>
+<p>时，数据库引擎会为非聚集索引自动创建一个索引树(就象“图书名称”目录一样)，产品名称会存储在索引页中，每个索引页包括一定范围的产品名称和它们对应的</p>
+<p>主键键值，<strong>当使用产品名称进行检索时，数据库引擎首先会根据产品名称查找非聚集索引树查出主键键值，然后使用主键键值查找聚集索引树找到最终的产品</strong>。应</p>
+<p>用正确的索引</p>
+<p>确保每个表都有主键：</p>
+<p>其实就是确保每张表中都有聚集索引（表在磁盘上的物理存储是按照主键顺序排列的），使用主键查找表中的数据，或在主键字段上进行排序，或在where子句中</p>
+<p>指定任意范围的主键键值时，其速度都是非常快的。</p>
+<p>如：</p>
+<p> 在下面这些列上创建非聚集索引：</p>
+<ol>
+<li><p>搜索时经常使用到的</p>
+</li>
+<li><p>用于连接其它表的</p>
+</li>
+<li><p>用于外键字段的</p>
+</li>
+<li><p>高选中性的</p>
+</li>
+<li><p>ORDER BY子句使用到的</p>
+</li>
+<li><p>XML类型</p>
+</li>
+</ol>
+<h2 id="三、-创建适当的索引覆盖"><a href="#三、-创建适当的索引覆盖" class="headerlink" title="三、 创建适当的索引覆盖"></a>三、 创建适当的索引覆盖</h2><p>假设<code>solist</code>表(id,soid,matid,qty)的外键列(<code>soid</code>)上创建了一个非聚集索引， soid列是一个高选中性列，在where子句中使用索引列(soid)的select查询都会更快，如果在外键上没有创建索引，将会发生全部扫描。这种情况下，还可以使用索引覆盖。</p>
+<ul>
+<li>创建非聚集索引soid：</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> NONCLUSTERED INDEX IX_SOLIST_SOIDON [dbo].[SOList] ([SOID])GO</span><br></pre></td></tr></table></figure>
 
-        <div class="article-info info-on-right">
-          
-          
+<p>（执行计划：50%非聚集索引，50%根据聚集索引键在查找聚集索引表的数据）</p>
+<ul>
+<li>在这种情况下，可以创建索引覆盖：</li>
+</ul>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> NONCLUSTERED INDEX IX_SOLIST_SOIDON [dbo].[SOList] ([SOID]) INCLUDE (matid,qty)GO</span><br></pre></td></tr></table></figure>
 
+<p>总结:</p>
+<p><strong>索引覆盖</strong>：在select的数据列只从索引中获取，不必读取数据行，也就是查询列被要建立的索引覆盖，属于非聚集复合索引。可以在那些select查询中常使用到的</p>
+<p>列上创建覆盖索引，但覆盖索引中包括过多的列也不行，因为覆盖索引列的值是存储在内存中的，这样会消耗过多内存，引发性能下降。创建覆盖索引时使用sql </p>
+<p>profiler、数据库调整顾问等工具来辅助进行，生产环境的执行计划和测试环境的可能有所不同，即使表和索引结构完全一致，要查看执行计划是否真正利用这个</p>
+<p>新建的索引，那么最好能够模拟一个真实的负载坏境，然后创建合适的索引并测试。同时可以使用SQL profiler来诊断性能问题。比如，找出执行过慢的SQL语</p>
+<p>句，在常用的列上增加覆盖索引或者修改原来的索引为覆盖索引。</p>
+<h2 id="四、-整理索引碎片"><a href="#四、-整理索引碎片" class="headerlink" title="四、 整理索引碎片"></a>四、 整理索引碎片</h2><p>已经创建好了索引，并且所有索引都在工作，但性能却仍然不好，那很可能是产生了索引碎片，你需要进行索引碎片整理。</p>
+<ul>
+<li>什么是索引碎片?</li>
+</ul>
+<p>由于表上有过度地插入、修改和删除操作，索引页被分成多块就形成了索引碎片，如果索引碎片严重，那扫描索引的时间就会变长，甚至导致索引不可用，因此数</p>
+<p>据检索操作就慢下来了。</p>
+<p>有两种类型的索引碎片：内部碎片和外部碎片。</p>
+<p><strong>内部碎片</strong>：为了有效的利用内存，使内存产生更少的碎片，要对内存分页，内存以页为单位来使用，最后一页往往装不满，于是形成了内部碎片。</p>
+<p><strong>外部碎片</strong>：为了要共享分段，在段的换入换出时形成外部碎片，比如5K的段换出后，有一个4k的段进来放到原来5k的地方，于是形成1k的外部碎片。</p>
+<ul>
+<li>是否发生了索引碎片?</li>
+</ul>
+<p>Master数据库下执行如下的SQL（其中’ERP2017full’为实际数据库名称）：</p>
+<p>两种方法：</p>
+<p>第一种方法：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> </span><br><span class="line">object_name(dt.object_id) Tablename,</span><br><span class="line">si.name IndexName,</span><br><span class="line">dt.avg_fragmentation_in_percent <span class="keyword">AS</span> ExternalFragmentation,</span><br><span class="line">dt.avg_page_space_used_in_percent <span class="keyword">AS</span> InternalFragmentation </span><br><span class="line"><span class="keyword">FROM</span></span><br><span class="line">(<span class="keyword">SELECT</span> object_id,index_id,avg_fragmentation_in_percent,avg_page_space_used_in_percent</span><br><span class="line"><span class="keyword">FROM</span> sys.dm_db_index_physical_stats (db_id(‘ERP2017full’),<span class="keyword">null</span>,<span class="keyword">null</span>,<span class="keyword">null</span>,’DETAILED’)</span><br><span class="line"><span class="keyword">WHERE</span> index_id <span class="operator">&lt;&gt;</span><span class="number">0</span>) <span class="keyword">AS</span> dt </span><br><span class="line"><span class="keyword">INNER</span> <span class="keyword">JOIN</span> sys.indexes si </span><br><span class="line"><span class="keyword">ON</span> si.object_id<span class="operator">=</span>dt.object_id</span><br><span class="line"><span class="keyword">AND</span> si.index_id<span class="operator">=</span>dt.index_id</span><br><span class="line"><span class="keyword">AND</span> dt.avg_fragmentation_in_percent<span class="operator">&gt;</span><span class="number">10</span></span><br><span class="line"><span class="keyword">AND</span> dt.avg_page_space_used_in_percent<span class="operator">&lt;</span><span class="number">75</span></span><br><span class="line"><span class="keyword">AND</span> object_name(dt.object_id) <span class="operator">=</span>’RPlist’</span><br><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> avg_fragmentation_in_percent <span class="keyword">DESC</span></span><br></pre></td></tr></table></figure>
+
+<p>上图分析：</p>
+<ol>
+<li><p><code>ExternalFragmentation</code>的值&gt;10表示对应的索引发生了外部碎片;</p>
+</li>
+<li><p><code>InternalFragmentation</code>的值&lt;75表示对应的索引发生了内部碎片。</p>
+</li>
+</ol>
+<p>第二种方法：</p>
+<p>dbcc showcontig(‘RPlist’)</p>
+<p>重点看：</p>
+<p>扫描密度：返回的最有用的一个百分比。这个百分比尽可能靠近100%，低了90%说明有索引碎片需要整理。（如果已经重组或者重建索引依然没有达到90%说明表缺少聚集索引或者根据实际生产环境需要手动新建非聚集索引，表数据量不大或者查询速度不慢可以不关注）</p>
+<p> 如何整理索引碎片?</p>
+<p>两种整理索引碎片的方法：<br>    1) 重组有碎片的索引：执行下面的命令</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> INDEX <span class="keyword">ALL</span> <span class="keyword">ON</span> RPlist REORGANIZE</span><br></pre></td></tr></table></figure>
+
+<p>​    2) 重建索引：执行下面的命令</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> INDEX <span class="keyword">ALL</span> <span class="keyword">ON</span> RPlist REBUILD <span class="keyword">WITH</span> (FILLFACTOR<span class="operator">=</span><span class="number">90</span>,ONLINE<span class="operator">=</span><span class="keyword">ON</span>)</span><br></pre></td></tr></table></figure>
+
+<p> 什么时候用重组，什么时候用重建呢?</p>
+<p>上面第一种方法对应索引的外部碎片值介于10-15之间，内部碎片值介于60-75之间时使用重组，其它情况就应该使用重建。索引可以提高查询速度，但如果你的数</p>
+<p>据库是一个事务型数据库，大多数时候都是更新操作，更新数据也就意味着要更新索引，这个时候就要兼顾查询和更新操作了，因为<strong>在事务型数据库表上创建过的索引会降低整体数据库性能</strong>。</p>
+<p>如果你的数据库是事务型的，平均每个表上不能超过5个索引，如果你的数据库是<strong>数据仓库型</strong>，平均每个表可以创建10个索引都没问题。</p>
+<h2 id="五、-识别低效的TSQL，采用最佳实践"><a href="#五、-识别低效的TSQL，采用最佳实践" class="headerlink" title="五、 识别低效的TSQL，采用最佳实践"></a>五、 识别低效的TSQL，采用最佳实践</h2><p> 查询中不要使用“select *”（取出指定需要的列），避免关联不必要的表</p>
+<p> “能省就省”，避免检索不必要的列带来额外的系统开销。</p>
+<p> 查询没有使用 “覆盖索引”的优点，查询缓慢。</p>
+<p> 连接条件中避免包含不必要的表，否则会强制数据库引擎检索和匹配不需要的数据，增加了查询执行时间。</p>
+<p> 避免死锁，事务尽可能地缩短，在一个事务中应尽可能减少涉及到的数据量</p>
+<p> 避免使用count()获得表的总记录数：</p>
+<p>如：select count(*) from solist，会执行全表扫描获得总记录数</p>
+<p>如：select rows from sysindexes WHERE id =OBJECT_ID(‘dbo.solist’) AND indid &lt;2，执行索引查找，速度非常快</p>
+<p> 避免使用临时表：</p>
+<p>(1)除非却有需要，否则<strong>应尽量避免使用临时表</strong>，相反，可以使用表变量代替;</p>
+<p>(2)大多数时候(99%)，表变量驻扎在内存中，因此速度比临时表更快，临时表驻扎在TempDb数据库中，因此临时表上的操作需要跨数据库通信，速度自然慢。</p>
+<p> 使用union实现or操作：</p>
+<p>(1) 在查询中尽量不要使用or，使用union合并两个不同的查询结果集，这样查询性能会更好;</p>
+<p>(2) 如果不是必须要不同的结果集，使用union all效果会更好，因为它不会对结果集排序。</p>
+<p> 为大对象使用延迟加载策略：</p>
+<p>(1) 在不同的表中存储大对象(如VARCHAR(MAX)，Image，Text等)，然后在主表中存储这些大对象的引用;</p>
+<p>(2) 在查询中检索所有主表数据，如果需要载入大对象，按需从大对象表中检索大对象。</p>
+<h2 id="六、-查询执行计划"><a href="#六、-查询执行计划" class="headerlink" title="六、 查询执行计划"></a>六、 查询执行计划</h2><h3 id="执行计划示例："><a href="#执行计划示例：" class="headerlink" title="执行计划示例："></a>执行计划示例：</h3><p>把需要优化的SQL选中，点击上面的“显示估计的执行计划”按钮：</p>
+<p>如：聚集索引逐行扫描：</p>
+<p>如，索引查找定位：</p>
+<h3 id="执行计划关键耗时操作步骤名称（从快—-gt-慢排序）："><a href="#执行计划关键耗时操作步骤名称（从快—-gt-慢排序）：" class="headerlink" title="执行计划关键耗时操作步骤名称（从快—&gt;慢排序）："></a>执行计划关键耗时操作步骤名称（从快—&gt;慢排序）：</h3><p>1、【Clustered Index Seek】：直接根据聚集索引获取记录，最快！</p>
+<p>2、【Index Seek】：根据索引，定位（获取）记录的存放位置，然后取得记录。</p>
+<p>3、【Index Scan】：根据索引，从表中过滤出来一部分记录，再查找所有匹配的记录行，显然比第一种方式的查找范围要小，因此比下面的【Table Scan】要</p>
+<p>快，但是比上面的都慢。</p>
+<p>4、【Table Scan】：遍历整个表，查找所有匹配的记录行。这个操作将会一行一行的检查，当然，效率也是最差的。</p>
+<p>5、【Clustered Index Scan】：和【Table Scan】一样。注意：不要以为这里有个Index，就认为不一样了。 其实它的意思是说：按聚集索引来逐行扫描每一行记</p>
+<p>录，因为记录就是按聚集索引来顺序存放的。 而【Table Scan】只是说：要扫描的表没有聚集索引而已，因此这二个操作本质上也是一样的。</p>
+<h3 id="根据执行计划操作步骤进行优化："><a href="#根据执行计划操作步骤进行优化：" class="headerlink" title="根据执行计划操作步骤进行优化："></a>根据执行计划操作步骤进行优化：</h3><p>当你的查询很慢时，执行计划出现下面的耗时步骤应该怎么优化：</p>
+<p>1、表扫描(Table Scan)</p>
+<p>当表没有聚集索引时就会发生，这时只要创建聚集索引或重整索引一般都可以解决问题。</p>
+<p>2、聚集索引扫描(Clustered Index Scan)</p>
+<p>有时可以认为等同于表扫描，当某列上的非聚集索引无效时会发生（或者没有对应的非聚集索引），这时只要创建一个非聚集索引就ok了。</p>
+<p>如：创建一个非聚集索引在where 条件的tabnm字段上面：</p>
+<p>优化后：</p>
+<p>3、哈希连接(Hash Join)</p>
+<p>当连接两个表的列没有被索引时会发生，只需在这些列上创建索引即可。</p>
+<p>4、嵌套循环(Nested Loops)</p>
+<p>当非聚集索引不包括select查询清单的列时会发生，只需要创建覆盖索引问题即可解决。</p>
+<p>5、RID查找(RID Lookup)</p>
+<p>当你有一个非聚集索引，但相同的表上却没有聚集索引时会发生，此时数据库引擎会使用行ID查找真实的行，这时一个代价高的操作，这时只要在该表上创建聚集索引即可。</p>
+<h2 id="七、-应用反范式化，使用历史表"><a href="#七、-应用反范式化，使用历史表" class="headerlink" title="七、 应用反范式化，使用历史表"></a>七、 应用反范式化，使用历史表</h2><h3 id="反范式化"><a href="#反范式化" class="headerlink" title="反范式化"></a>反范式化</h3><h4 id="OLTA-在线事务分析-系统设计数据库："><a href="#OLTA-在线事务分析-系统设计数据库：" class="headerlink" title="OLTA(在线事务分析)系统设计数据库："></a>OLTA(在线事务分析)系统设计数据库：</h4><p>主要指为只读查询优化过的数据仓库，你可以(和应该)在你的数据库中应用反范式化和索引，也就是说，某些数据可以跨多个表存储，但报告和数据分析查询在这</p>
+<p>种数据库上可能会更快。</p>
+<h4 id="OLTP-联机事务处理-系统设计数据库："><a href="#OLTP-联机事务处理-系统设计数据库：" class="headerlink" title="OLTP(联机事务处理)系统设计数据库："></a>OLTP(联机事务处理)系统设计数据库：</h4><p>​        这样的数据库主要执行数据更新操作(包括插入/更新/删除)，我建议你至少实施第一、二、三范式，这样数据冗余可以降到最低，数据存储也可以达到最小化，可</p>
+<p>管理性也会好一点。</p>
+<p>​        在OLTP系统上是否应用范式，在数据库上总有大量的读操作(即select查询)，当应用了所有优化技术后，如果发现数据检索操作仍然效率低下，此时，你可能需要考虑应用反范式设计了：</p>
+<p>假设我们有两个表OrderDetails(ID,ProductID,OrderQty) 和 Products(ID,ProductName)分别存储订单详细信息和产品信息，现在要查询某个客户订购的产品名称</p>
+<p>和它们的数量，查询SQL语句如下：</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> Products.ProductName,OrderQty</span><br><span class="line"><span class="keyword">FROM</span> OrderDetails </span><br><span class="line">INNERJOIN Products</span><br><span class="line"><span class="keyword">ON</span> OrderDetails.ProductID <span class="operator">=</span> Products.ProductID</span><br><span class="line"><span class="keyword">WHERE</span> SalesOrderID <span class="operator">=</span><span class="number">47057</span></span><br></pre></td></tr></table></figure>
+
+<p>如果这两个都是大表，当你应用了所有优化技巧后，查询速度仍然很慢，这时可以考虑以下反范式化设计：</p>
+<p>1)在OrderDetails表上添加一列ProductName，并填充好数据;</p>
+<p>2)重写上面的SQL语句</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> ProductName,OrderQty</span><br><span class="line"></span><br><span class="line"><span class="keyword">FROM</span> OrderDetails</span><br><span class="line"></span><br><span class="line"><span class="keyword">WHERE</span> SalesOrderID <span class="operator">=</span><span class="number">47057</span></span><br></pre></td></tr></table></figure>
+
+<p>注意在OrderDetails表上应用了反范式化后，不再需要连接Products表，因此在执行SQL时，SQL引擎不会执行两个表的连接操作，查询速度当然会快一些。</p>
+<p>为了提高select操作性能，我们不得不做出一些牺牲，需要在两个地方(OrderDetails 和 Products表)存储相同的数据(ProductName)，当我们插入或更新Products </p>
+<p>表中的ProductName字段时，不得不同步更新OrderDetails表中的ProductName字段，此外，应用这种反范式化设计时会增加存储资源消耗。</p>
+<p>因此在实施反范式化设计时，我们必须在数据冗余和查询操作性能之间进行权衡，同时在应用反范式化后，我们不得不重构某些插入和更新操作代码。有一个重要</p>
+<p>的原则需要遵守，那就是<strong>只有当你应用了所有其它优化技术都还不能将性能提升到理想情况时才使用反范式化。同时还需注意不能使用太多的反范式化设计，那样</strong></p>
+<p><strong>会使原本清晰的表结构设计变得越来模糊。</strong></p>
+<h3 id="历史表"><a href="#历史表" class="headerlink" title="历史表"></a>历史表</h3><p>应用程序中有定期运行的数据检索操作(如报表)，如果涉及到大表的检索，利用数据库的Job来完成这个任务，并对这个历史表建立合适的索引，那么周期性执行的</p>
+<p>数据检索操作可以迁移到这个历史表上，对单个历史表的查询性能肯定比连接多个事务表的查询速度要快得多。</p>
+<p>示例：</p>
+<p>例如，假设有一个连锁商店的月度报表需要3个小时才能执行完毕。那么你除了应用其它优化技巧外，还可以采取以下手段：</p>
+<ul>
+<li>1)使用反范式化结构创建一个历史表，并对销售数据建立合适的索引;　</li>
+<li>2)在SQL Server上创建一个定期执行的操作，每隔24小时运行一次，在半夜往历史表中填充数据;</li>
+<li>3)修改报表代码，从历史表获取数据。</li>
+</ul>
+<p>创建定期执行的操作:</p>
+<p>按照下面的步骤在SQL Server中创建一个定期执行的操作，定期从事务表中提取数据填充到历史表中。</p>
+<ul>
+<li>1)首先确保SQL Server代理服务处于运行状态;</li>
+<li>2)在SQL Server配置管理器中展开SQL Server代理节点，在“作业”节点上创建一个新作业，在“常规”标签页中，输入作业名称和描述文字;</li>
+<li>3)在“步骤”标签页中，点击“新建”按钮创建一个新的作业步骤，输入名字和TSQL代码，最后保存;</li>
+<li>4)切换到“调度”标签页，点击“新建”按钮创建一个新调度计划;</li>
+<li>5)最后保存调度计划。</li>
+</ul>
+<p>在数据插入和更新中提前执行耗时的计算，简化查询。大多数情况下，你会看到你的应用程序是一个接一个地执行数据插入或更新操作，一次只涉及到一条记录，但数据检索操作可能同时涉及到多条记录。如果你的查询中包括一个复杂的计算操作，毫无疑问这将导致整体的查询性能下降，你可以考虑下面的解决办法：</p>
+<ul>
+<li>1)在表中创建额外的一列，包含计算的值;</li>
+<li>2)为插入和更新事件创建一个触发器，使用相同的计算逻辑计算值，计算完成后更新到新建的列;</li>
+<li>3)使用新创建的列替换查询中的计算逻辑。</li>
+</ul>
+<p>实施完上述步骤后，插入和更新操作可能会更慢一点，因为每次插入和更新时触发器都会执行一下，但数据检索操作会比之前快得多，因为执行查询时，数据库引</p>
+<p>擎不会执行计算操作了。</p>
+<h2 id="八、-使用SQL事件探查器和性能监控工具有效地诊断性能问题"><a href="#八、-使用SQL事件探查器和性能监控工具有效地诊断性能问题" class="headerlink" title="八、 使用SQL事件探查器和性能监控工具有效地诊断性能问题"></a>八、 使用SQL事件探查器和性能监控工具有效地诊断性能问题</h2><p> 使用SQL事件探查器SQL Server Profiler：<br>如，创建跟踪执行超过3秒的TSQL：选择执行时间大于3秒的SQL：再选择applicationName为ERDRP的，或者java的JDBC Driver(模糊匹配)：展示结果：超过3秒的SQL另外，选择SQL Server自带的一些跟踪模板：如TSQL_Locks模板可以创建自己的模板：如跟踪进行了表扫描和检测死锁的TSQL。<br>点击“文件”，新建模板，选择服务器类型，定义文件名：选择表扫描和死锁检测：可以同时选择显示查询到的TSQL执行计划树（performanceshowplan text和showplan xml），点击保存。总结：通过SQL Server Profiler工具可以探测到问题TSQL，然后再进行具体的优化分析，解决性能问题。<br> 关联性能计数器日志和SQL事件探查器跟踪信息进行深入的分析<br>通过SQL事件探查器可以找出哪些SQL执行时间过长，但它却不能给出导致执行时间过长的上下文信息，但性能监视工具可以提供独立组件的性能统计数据(即上下文信息)，它们正好互补。<br>如果相同的查询在生产库和测试库上的执行时间差别过大，那说明测试服务器的负载，环境和查询执行上下文都和生产服务器不一样，因此需要一种方法来模拟生产服务器上的查询执行上下文，这时就需要结合SQL事件探查器的跟踪信息和性能监视工具的性能计数器日志。<br>将二者结合起来分析可以更容易找出性能问题的根本原因，例如，你可能发现在生产服务器上每次查询都需要10秒，CPU利用率达到了100%，这时就应该放下SQL调优，先调查一下为什么CPU利用率会上升到100%（关于SQL执行导致CPU100%的处理方法可以百度搜索，找出排队的SQL，再进行调优）。<br>关联SQL事件探查器跟踪信息和性能计数器日志的步骤如下：<br>1)创建性能计数器日志，包括下列常见的性能计数器，指定“手动”方式启动和停止计数器日志：<br>—网络接口\输出队列长度<br>—处理器%处理器时间<br>—SQL Server：缓冲管理器\缓冲区缓存命中率<br>—SQL Server：缓冲管理器\页面生命周期<br>—SQL Server：SQL统计\批量请求数/秒<br>—SQL Server：SQL统计\SQL 编译<br>—SQL Server：SQL统计\SQL 重新编译/秒<br>创建好性能计数器日志，但不启动它。<br>2)使用SQL事件探查器TSQL Duration模板创建一个跟踪，添加“开始时间”和“结束时间”列跟踪，同时启动事件探查器跟踪和前一步创建的性能计数器日志;<br>3)跟踪到足够信息后，同时停掉SQL事件探查器跟踪和性能计数器日志，将SQL事件探查器跟踪信息保存为一个.trc文件;<br>4)关闭SQL事件探查器跟踪窗口，再使用事件探查器打开.trc文件，点击“文件”*“导入性能数据”关联性能计数器日志，此时会打开一个文件浏览器窗口，选择刚刚保存的性能计数器日志文件进行关联;<br>5)在打开的窗口中选择所有计数器，点击“确定”，你将会看到下图所示的界面，它同时显示SQL事件探查器的跟踪信息和性能计数器日志;<br>6)在事件探查器跟踪信息输出中选择一条TSQL，你将会看到一个红色竖条，这代表这条TSQL执行时相关计数器的统计数据位置，同样，点击性能计数器日志输出曲线中高于正常值的点，你会看到对应的TSQL在SQL事件探查器输出中也是突出显示的。<br>总结：<br>诊断SQL Server性能问题的工具和技术有很多，例如查看SQL Server日志文件，利用调优顾问(DTA)获得调优建议，无论使用哪种工具，你都需要深入了解内部的细节原因，只有找出最根本的原因之后，才能解决性能问题。<br>九、 合理组织数据库文件组和文件<br> 文件<br>创建SQL Server数据库时，数据库服务器会自动在文件系统上创建一系列的文件，之后创建的每一个数据库对象实际上都是存储在这些文件中的。SQL Server有下面三种文件：<br>1).mdf文件<br>这是最主要的数据文件，每个数据库只能有一个主数据文件，所有系统对象都存储在主数据文件中，如果不创建次要数据文件，所有用户对象(用户创建的数据库对象)也都存储在主数据文件中。<br>2).ndf文件<br>这些都是次要数据文件，它们是可选的，它们存储的都是用户创建的对象。<br>3).ldf文件<br>这些是事务日志文件，数量从一到几个不等，它里面存储的是事务日志。<br>默认情况下，创建SQL Server数据库时会自动创建主数据文件和事务日志文件，当然也可以修改这两个文件的属性，如保存路径。<br> 文件组<br>为了便于管理和获得更好的性能，数据文件通常都进行了合理的分组，创建一个新的SQL Server数据库时，会自动创建主文件组，主数据文件就包含在主文件组中，主文件组也被设为默认组，因此所有新创建的用户对象都自动存储在主文件组中(具体说就是存储在主数据文件中)。<br>如果你想将你的用户对象(表、视图、存储过程和函数等)存储在次要数据文件中，那需要：<br>1)创建一个新的文件组，并将其设为默认文件组;<br>2)创建一个新的数据文件(.ndf)，将其归于第一步创建的新文件组中。<br>以后创建的对象就会全部存储在次要文件组中了。<br>注意：事务日志文件不属于任何文件组。<br> 文件/文件组组织最佳实践<br>如果你的数据库不大，那么默认的文件/文件组应该就能满足你的需要，但如果你的数据库变得很大时(假设有1000MB)，你可以(应该)对文件/文件组进行调整以获得更好的性能，调整文件/文件组的最佳实践内容如下：<br>1)主文件组必须完全独立，它里面应该只存储系统对象，所有的用户对象都不应该放在主文件组中。主文件组也不应该设为默认组，将系统对象和用户对象分开可以获得更好的性能;<br>2)如果有多块硬盘，可以将每个文件组中的每个文件分配到每块硬盘上，这样可以实现分布式磁盘I/O，大大提高数据读写速度;<br>3)将访问频繁的表及其索引放到一个单独的文件组中，这样读取表数据和索引都会更快;<br>4)将访问频繁的包含Text和Image数据类型的列的表放到一个单独的文件组中，最好将其中的Text和Image列数据放在一个独立的硬盘中，这样检索该表的非Text和Image列时速度就不会受Text和Image列的影响;<br>5)将事务日志文件放在一个独立的硬盘上，千万不要和数据文件共用一块硬盘，日志操作属于写密集型操作，因此保证日志写入具有良好的I/O性能非常重要;<br>6)将“只读”表单独放到一个独立的文件组中，同样，将“只写”表单独放到一个文件组中，这样只读表的检索速度会更快，只写表的更新速度也会更快;<br>7)不要过度使用SQL Server的“自动增长”特性，因为自动增长的成本其实是很高的，设置“自动增长”值为一个合适的值，如一周，同样，也不要过度频繁地使用“自动收缩”特性，最好禁用掉自动收缩，改为手工收缩数据库大小，或使用调度操作，设置一个合理的时间间隔，如一个月。<br>十、 在大表上应用分区<br> 什么是表分区?<br>表分区就是将大表拆分成多个小表，以免检索数据时扫描的数据太多，这个思想参考了“分而治之”的理论。<br>当你的数据库中有一个大表(假设有上百万行记录)，如果其它优化技巧都用上了，但查询速度仍然非常慢时，你就应该考虑对这个表进行分区了。来看一下分区的类型。<br> 水平分区：<br>假设有一个表包括千万行记录，为了便于理解，假设表有一个自动增长的主键字段(如id)，我们可以将表拆分成10个独立的分区表，每个分区包含100万行记录，分区就要依据id字段的值实施，即第一个分区包含id值从1-1000000的记录，第二个分区包含1000001-2000000的记录，以此类推。这种以水平方向分割表的方式就叫做水平分区。<br> 垂直分区：<br>假设有一个表的列数和行数都非常多，其中某些列被经常访问，其余的列不是经常访问。由于表非常大，所有检索操作都很慢，因此需要基于频繁访问的列进行分区，这样我们可以将这个大表拆分成多个小表，每个小表由大表的一部分列组成，这种垂直拆分表的方法就叫做垂直分区。<br>另一个垂直分区的原则是按有索引的列无索引列进行拆分，但这种分区法需要小心，因为如果任何查询都涉及到检索这两个分区，SQL引擎不得不连接这两个分区，那样的话性能反而会低。<br>本文主要对水平分区做一介绍。<br> 水平分区最佳实践<br>1)将大表分区后，将每个分区放在一个独立的文件中，并将这个文件存放在独立的硬盘上，这样数据库引擎可以同时并行检索多块硬盘上的不同数据文件，提高并发读写速度;<br>2)对于历史数据，可以考虑基于历史数据的“年龄”进行分区，例如，假设表中存储的是订单数据，可以使用订单日期列作为分区的依据，如将每年的订单数据做成一个分区。<br>如何分区?<br>假设Order表中包含了四年(1999-2002)的订单数据，有上百万的记录，那如果要对这个表进行分区，采取的步骤如下：<br>1)添加文件组<br>使用下面的命令创建一个文件组:<br>ALTER DATABASE OrderDB ADD FILEGROUP [1999]<br>ALTER DATABASE OrderDB ADD FILE (NAME = N’1999’, FILENAME<br>= N’C:\OrderDB\1999.ndf’, SIZE = 5MB, MAXSIZE = 100MB, FILEGROWTH = 5MB) TO<br>FILEGROUP [1999]<br>通过上面的语句我们添加了一个文件组1999，然后增加了一个次要数据文件“C:\OrderDB\1999.ndf”到这个文件组中。<br>使用上面的命令再创建三个文件组2000，2001和2002，每个文件组存储一年的销售数据。<br>2)创建分区函数<br>分区函数是定义分界点的一个对象，使用下面的命令创建分区函数：<br>CREATE PARTITION FUNCTION FNOrderDateRange (DateTime) AS<br>RANGE LEFT FOR VALUES (‘19991231’, ‘20001231’, ‘20011231’)<br>上面的分区函数指定：<br>DateTime&lt;=1999/12/31的记录进入第一个分区;<br>DateTime &gt; 1999/12/31 且 &lt;= 2000/12/31的记录进入第二个分区;<br>DateTime &gt; 2000/12/31 且 &lt;= 2001/12/31的记录进入第三个分区;<br>DateTime &gt; 2001/12/31的记录进入第四个分区。<br>RANGE LEFT指定应该进入左边分区的边界值，例如小于或等于1999/12/31的值都应该进入第一个分区，下一个值就应该进入第二个分区了。如果使用RANGE RIGHT，边界值以及大于边界值的值都应该进入右边的分区，因此在这个例子中，边界值2000/12/31就应该进入第二个分区，小于这个边界值的值就应该进入第一个分区。<br>3)创建分区方案<br>通过分区方案在表/索引的分区和存储它们的文件组之间建立映射关系。创建分区方案的命令如下：<br>CREATE PARTITION SCHEME OrderDatePScheme AS PARTITION FNOrderDateRange<br>TO ([1999], [2000], [2001], [2002])<br>在上面的命令中，我们指定了：<br>第一个分区应该进入1999文件组;<br>第二个分区就进入2000文件组;<br>第三个分区进入2001文件组;<br>第四个分区进入2002文件组。<br>4)在表上应用分区<br>至此，我们定义了必要的分区原则，现在需要做的就是给表分区了。首先使用DROP INDEX命令删除表上现有的聚集索引，通常主键上有聚集索引，如果是删除主键上的索引，还可以通过DROP CONSTRAINT删除主键来间接删除主键上的索引，如下面的命令删除PK_Orders主键：<br>ALTER TABLE Orders DROP CONSTRAINT PK_Orders;<br>在分区方案上重新创建聚集索引，命令如下：<br>CREATE UNIQUE CLUSTERED INDEX PK_Orders ON Orders(OrderDate) ON OrderDatePScheme (OrderDate)<br>假设OrderDate列的数据在表中是唯一的，表将基于分区方案OrderDatePScheme被分区，最终被分成四个小的部分，存放在四个文件组中。End 《本文来源于摘抄及部分总结》*</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/06/24/T-SQL%E4%BC%98%E5%8C%96/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/06/24/Think%20PHP/" class="archive-article-date">
-  	<time datetime="2021-06-24T01:39:20.984Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-24</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2021/06/24/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          前端知识总结
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/06/24/Think%20PHP/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">TP</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/06/24/Think%20PHP/">TP</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/06/24/TCPIP/" class="archive-article-date">
-  	<time datetime="2021-06-24T01:39:20.983Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/06/24/TCPIP/">TCP/IP</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/06/24/swoole%E5%AD%A6%E4%B9%A0/" class="archive-article-date">
-  	<time datetime="2021-06-24T01:39:20.981Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-24</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/06/24/swoole%E5%AD%A6%E4%B9%A0/">swoole</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/2021/06/page/2/">2</a><a class="extend next" rel="next" href="/archives/2021/06/page/2/">Next &amp;raquo;</a>
-    </nav>
   
 
 
@@ -465,8 +552,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
