@@ -6,19 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>数据库 | FZX的博客</title>
+  <title>Tag: 学习 | FZX的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="数据库mysql 脏读（针对的是未提交读数据）： 说的是事务知道了自己本不应该知道的东西，强调的动作是查询，我看到了自己不该看的东西 ; 事务A修改了数据，但未提交，而事务B查询了事务A修改过却没有提交的数据，这就是脏读，因为事务A可能会回滚。   不可重复读（针对其他提交前后，读取数据本身的对比）： 强调的是一个人查的时候，其他人却可以增删改, 但我却不知道数据被改了，还拿去做了之前的用途； 事">
-<meta property="og:type" content="article">
-<meta property="og:title" content="数据库">
-<meta property="og:url" content="http://example.com/2021/06/24/%E6%95%B0%E6%8D%AE%E5%BA%93/index.html">
+  <meta name="description" content="跳出围城，跳入围城">
+<meta property="og:type" content="website">
+<meta property="og:title" content="FZX的博客">
+<meta property="og:url" content="http://example.com/tags/%E5%AD%A6%E4%B9%A0/page/2/index.html">
 <meta property="og:site_name" content="FZX的博客">
-<meta property="og:description" content="数据库mysql 脏读（针对的是未提交读数据）： 说的是事务知道了自己本不应该知道的东西，强调的动作是查询，我看到了自己不该看的东西 ; 事务A修改了数据，但未提交，而事务B查询了事务A修改过却没有提交的数据，这就是脏读，因为事务A可能会回滚。   不可重复读（针对其他提交前后，读取数据本身的对比）： 强调的是一个人查的时候，其他人却可以增删改, 但我却不知道数据被改了，还拿去做了之前的用途； 事">
+<meta property="og:description" content="跳出围城，跳入围城">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-06-24T01:39:20.989Z">
-<meta property="article:modified_time" content="2021-06-24T02:17:44.214Z">
 <meta property="article:author" content="FZX">
-<meta property="article:tag" content="学习">
+<meta property="article:tag" content="后端，前端">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="FZX的博客" type="application/atom+xml">
@@ -163,147 +161,36 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-数据库" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      数据库
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2021" class="archive-year">2021</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2021/06/24/swagger/" class="archive-article-date">
+  	<time datetime="2021-06-24T01:39:20.980Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-24</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2021/06/24/swagger/">swagger</a>
     </h1>
   
 
-        
-        <a href="/2021/06/24/%E6%95%B0%E6%8D%AE%E5%BA%93/" class="archive-article-date">
-  	<time datetime="2021-06-24T01:39:20.989Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-24</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h1><h3 id="mysql"><a href="#mysql" class="headerlink" title="mysql"></a>mysql</h3><ul>
-<li>脏读（针对的是未提交读数据）：<ul>
-<li>说的是事务知道了自己本不应该知道的东西，强调的动作是查询，我看到了自己不该看的东西 ;</li>
-<li>事务A修改了数据，但未提交，而事务B查询了事务A修改过却没有提交的数据，这就是脏读，因为事务A可能会回滚。</li>
-</ul>
-</li>
-<li>不可重复读（针对其他提交前后，读取数据本身的对比）：<ul>
-<li>强调的是一个人查的时候，其他人却可以增删改, 但我却不知道数据被改了，还拿去做了之前的用途；</li>
-<li>事务A 先 查询了工资金额，是3000块钱，未提交 。事务B在事务A查询完之后，修改了工资金额，变成了13000, 在事务A前提交了；如果此时事务A再查询一次数据，就会发现钱跟上一次查询不一致，是13000，而不是3000。这就是不可重复读。强调事务A对要操作的数据被别人修改了，但在不知请的情况下拿去做之前的用途。</li>
-</ul>
-</li>
-<li>幻读（针对其他提交前后，读取数据条数的对比）：<ul>
-<li>强调的是我修改了数据，等我要查的时候，却发现有我没有修改的记录，为什么，因为有其他人插了一条新的。</li>
-<li>幻读是指在同一个事务中，存在前后两次查询同一个范围的数据，但是第二次查询却看到了第一次查询没看到的行，一般情况下只新增。事务A先修改了某个表的所有纪录的状态字段为已处理，未提交；事务B也在此时新增了一条未处理的记录，并提交了；事务A随后查询记录，却发现有一条记录是未处理的，很是诧异，刚刚不是全部修改为已处理嘛，以为出现了幻觉，这就是幻读。</li>
-</ul>
-</li>
-</ul>
-<h4 id="隔离级别"><a href="#隔离级别" class="headerlink" title="隔离级别"></a>隔离级别</h4><table>
-<thead>
-<tr>
-<th align="left"></th>
-<th></th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left"><strong>读未提交（RU）</strong></td>
-<td>一个事务还没提交时，它做的变更就能被别的事务看到。（别的事务指同一时间进行的增删改查操作）</td>
-</tr>
-<tr>
-<td align="left"><strong>读提交（RC）</strong></td>
-<td>一个事务提交（commit）之后，它做的变更才会被其他事务看到。</td>
-</tr>
-<tr>
-<td align="left"><strong>可重复读（RR）</strong></td>
-<td>一个事务执行过程中看到的数据，总是跟这个事务在启动时看到的数据是一致的。当然在可重复读隔离级别下，未提交变更对其他事务也是不可见的。</td>
-</tr>
-<tr>
-<td align="left"><strong>串行（xíng）化（S）</strong></td>
-<td>正如物理书上写的，串行是单线路，顾名思义在MySQL中同一时刻只允许单个事务执行，“写”会加“写锁”，“读”会加“读锁”。当出现读写锁冲突的时候，后访问的事务必须等前一个事务执行完成，才能继续执行。</td>
-</tr>
-</tbody></table>
-<h5 id="解决问题"><a href="#解决问题" class="headerlink" title="解决问题"></a>解决问题</h5><table>
-<thead>
-<tr>
-<th align="left">标题</th>
-<th align="left">脏读</th>
-<th align="left">不可重复读</th>
-<th align="left">幻读</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left"><strong>读未提交（RU）</strong></td>
-<td align="left">×</td>
-<td align="left">×</td>
-<td align="left">×</td>
-</tr>
-<tr>
-<td align="left"><strong>读提交（RC）</strong></td>
-<td align="left">√</td>
-<td align="left">×</td>
-<td align="left">×</td>
-</tr>
-<tr>
-<td align="left"><strong>可重复读（RR）</strong></td>
-<td align="left">√</td>
-<td align="left">√</td>
-<td align="left"><strong>√</strong></td>
-</tr>
-<tr>
-<td align="left"><strong>串行（xíng）化（S）</strong></td>
-<td align="left">√</td>
-<td align="left">√</td>
-<td align="left">√</td>
-</tr>
-</tbody></table>
-<p>假设你在管理一个个人银行账户表。一个表存了每个月月底的余额，一个表存了账单明细。这时候你要做数据校对，也就是判断上个月的余额和当前余额的差额，是否与本月的账单明细一致。你一定希望在校对过程中，即使有用户发生了一笔新的交易，也不影响你的校对结果。这时候使用“可重复读”隔离级别就很方便。事务启动时的视图可以认为是静态的，不受其他事务更新的影响。</p>
-<h3 id="如何进行SQL优化？"><a href="#如何进行SQL优化？" class="headerlink" title="如何进行SQL优化？"></a>如何进行SQL优化？</h3><p>（1）选择正确的存储引擎</p>
-<p>以 MySQL为例，包括有两个存储引擎 MyISAM 和 InnoDB，每个引擎都有利有弊。</p>
-<p>MyISAM 适合于一些需要大量查询的应用，但其对于有大量写操作并不是很好。甚至你只是需要update一个字段，整个表都会被锁起来，而别的进程，就算是读进程都无法操作直到读操作完成。另外，MyISAM 对于 SELECT COUNT(*) 这类的计算是超快无比的。</p>
-<p>InnoDB 的趋势会是一个非常复杂的存储引擎，对于一些小的应用，它会比 MyISAM 还慢。但是它支持“行锁” ，于是在写操作比较多的时候，会更优秀。并且，他还支持更多的高级应用，比如：事务。</p>
-<p>（2）优化字段的数据类型</p>
-<p>记住一个原则，越小的列会越快。如果一个表只会有几列罢了（比如说字典表，配置表），那么，我们就没有理由使用 INT 来做主键，使用 MEDIUMINT, SMALLINT 或是更小的 TINYINT 会更经济一些。如果你不需要记录时间，使用 DATE 要比 DATETIME 好得多。当然，你也需要留够足够的扩展空间。</p>
-<p>（3）为搜索字段添加索引</p>
-<p>索引并不一定就是给主键或是唯一的字段。如果在你的表中，有某个字段你总要会经常用来做搜索，那么最好是为其建立索引，除非你要搜索的字段是大的文本字段，那应该建立全文索引。</p>
-<p>(4)避免使用Select <em>从数据库里读出越多的数据，那么查询就会变得越慢。并且，如果你的数据库服务器和WEB服务器是两台独立的服务器的话，这还会增加网络传输的负载。即使你要查询数据表的所有字段，也尽量不要用</em>通配符，善用内置提供的字段排除定义也许能给带来更多的便利。</p>
-<p>(5)使用 ENUM 而不是 VARCHAR</p>
-<p>ENUM 类型是非常快和紧凑的。在实际上，其保存的是 TINYINT，但其外表上显示为字符串。这样一来，用这个字段来做一些选项列表变得相当的完美。例如，性别、民族、部门和状态之类的这些字段的取值是有限而且固定的，那么，你应该使用 ENUM 而不是 VARCHAR。</p>
-<p>(6)尽可能的使用 NOT NULL</p>
-<p>除非你有一个很特别的原因去使用 NULL 值，你应该总是让你的字段保持 NOT NULL。NULL其实需要额外的空间，并且，在你进行比较的时候，你的程序会更复杂。当然，这里并不是说你就不能使用NULL了，现实情况是很复杂的，依然会有些情况下，你需要使用NULL值。</p>
-<p>(7)固定长度的表会更快</p>
-<p>如果表中的所有字段都是“固定长度”的，整个表会被认为是 “static” 或 “fixed-length”。例如，表中没有如下类型的字段：VARCHAR，TEXT，BLOB。只要你包括了其中一个这些字段，那么这个表就不是“固定长度静态表”了，这样，MySQL 引擎会用另一种方法来处理。</p>
-<p>固定长度的表会提高性能，因为MySQL搜寻得会更快一些，因为这些固定的长度是很容易计算下一个数据的偏移量的，所以读取的自然也会很快。而如果字段不是定长的，那么，每一次要找下一条的话，需要程序找到主键。并且，固定长度的表也更容易被缓存和重建。不过，唯一的副作用是，固定长度的字段会浪费一些空间，因为定长的字段无论你用不用，他都是要分配那么多的空间。</p>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -315,114 +202,98 @@
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/06/24/%E6%95%B0%E6%8D%AE%E5%BA%93/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
   
-<nav id="article-nav">
-  
-    <a href="/2021/06/24/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          正则表达式
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2021/06/24/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">前端知识总结</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2021/06/24/psr-2/" class="archive-article-date">
+  	<time datetime="2021-06-24T01:39:20.978Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-24</time>
+</a>
         </div>
-        
-        
-    </div>
-</aside>
-
-
-
+    	 
   
-  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2021/06/24/psr-2/">psr-2</a>
+    </h1>
   
 
+        <div class="article-info info-on-right">
+          
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">学习</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+          
+
+        </div>
+        <div class="clearfix"></div>
+    </header>
+  </div>
+</article>
+  
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2021/06/24/PHP%E5%BC%80%E5%8F%91%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83/" class="archive-article-date">
+  	<time datetime="2021-06-24T01:39:20.977Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-06-24</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2021/06/24/PHP%E5%BC%80%E5%8F%91%E5%91%BD%E5%90%8D%E8%A7%84%E8%8C%83/">PHP命名规范</a>
+    </h1>
   
 
+        <div class="article-info info-on-right">
+          
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">学习</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+          
+
+        </div>
+        <div class="clearfix"></div>
+    </header>
+  </div>
+</article>
+  
+  
+    </div></section>
   
 
+    
+    <nav id="page-nav">
+      <a class="extend prev" rel="prev" href="/tags/%E5%AD%A6%E4%B9%A0/">&amp;laquo; Prev</a><a class="page-number" href="/tags/%E5%AD%A6%E4%B9%A0/">1</a><span class="page-number current">2</span>
+    </nav>
   
 
 
@@ -446,9 +317,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
